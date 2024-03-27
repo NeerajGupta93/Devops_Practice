@@ -1,0 +1,37 @@
+mkdir docker-projects
+mkdir flask-app
+cd flask-app
+git clone https://github.com/LondheShubham153/flask-app-ecs.git
+cd flask-app-ecs/
+rm Dockerfile
+vim Dockerfile
+
+/// Create Docker File  and biuild the image ///
+docker build . -t flask-app:latest (-t for tag)
+docker images
+docker run -p 80:80 flask-app:latest
+vim requirements.txt
+docker build . -t flask-app:latest
+docker run -p 80:80 flask-app:latest
+cat Dockerfile
+cat ../../java-app/Dockerfile
+systemctl status docker
+
+
+
+
+
+/// Dockerfile ///
+# Gte base Image
+FROM python:3.9
+
+# Your Working Directory
+WORKDIR /app
+# Copy file to workdir container
+COPY . .
+
+# Install required dependencies
+RUN pip install -r requirements.txt
+
+# Run the Python app
+CMD ["python","run.py"]

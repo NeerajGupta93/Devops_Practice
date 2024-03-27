@@ -1,0 +1,4 @@
+1) Slim is used to make the image at low size. The actual image is used to install the requirment and then it will saved
+to /usr/local/lib.
+
+2) 

@@ -1,0 +1,36 @@
+sudo apt-get update
+sudo apt-get install docker.io
+systemctl status docker
+cat /etc/group
+sudo usermod -aG docker $USER
+cat /etc/group
+sudo reboot
+docker ps
+docker ps -a
+mysql               
+docker run -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
+docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
+docker kill 6f3627bf041d (container id)
+docker exec -it 35864c3137b2 bash (container id)
+
+
+
+
+#### Working With Docker Hub #####
+docker login
+docker images
+docker tag flask-app:latest neeraj1993/python:latest (change the nal=me of images with your doceker hub a/c)
+docker push neeraj1993/python
+docker rmi bee1339dcba6 --force (use image id)
+docker pull neeraj1993/python:latest
+
+
+#### Providing Vlume Mounts ####
+mkdir vol
+cd vol
+mkdir mysqldata
+cd mysqldata
+pwd (get the path to store the fil from the swl app)
+docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
+docker rm mysql-safe
+docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
