@@ -1,0 +1,47 @@
+Jenkins is build on Java tool. So it has to be installed.
+Installation of Java
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java --version
+which java
+
+
+//// Install jenkins /////
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key (/usr/share/keyrings/jenkins-keyring.asc --> Path where the key will be stored)
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+systemctl status jenkins
+enable 8080
+systemctl jenkins enable
+
+//// Jenkind run on Port 8080 by Default ////
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+cd /var/lib/jenkins/workspace/django-notes-app
+
+/// install docker /////
+
+sudo apt-get install docker.io docker-compose -y
+sudo usermod -aG docker $USER
+sudo usermod -aG docker jenkins
+sudo reboot
+sudo systemctl enable jenkins
+sudo systemctl enable docker
+sudo systemctl restart jenkins
+sudo systemctl restart docker
+
+/// We use declerative instead of free style. Need to learn apache grrovy syntax. ///
+/// stages {Code------> Build--------> Test------> Deploy} ////
+
+/// Install SonarQuube server/////
+docker run -itd --name sonarqube-server -p 9000:9000 sonarqube:lts-community
+bydefault pass: admin admin
+
+/// Manage Jenkins //
+Install plugin --> Sonarqube scanner(too install)
+credentials--> Provide Credential to jenkins created in sonarqube.(Token)
+attach sonarqube server in jenkins
+install sonarqube scanner in tools(to enablle)
