@@ -45,3 +45,10 @@ Install plugin --> Sonarqube scanner(too install)
 credentials--> Provide Credential to jenkins created in sonarqube.(Token)
 attach sonarqube server in jenkins
 install sonarqube scanner in tools(to enablle)
+
+
+/// install trivy in server //
+trivy image image_name(to scan image)
+
+
+/// install owasp plugins in jenkins /////

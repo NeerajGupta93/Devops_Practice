@@ -1,8 +1,0 @@
-SonaQube-->
-It runs on server. Best way to deploy using docker.
-In simple terms, SonarQube is a tool that helps software developers write better code. 
-It checks the code for mistakes, bugs, and things that could cause problems. 
-It's like having a helpful assistant who reads through your code and tells you if there's anything you need to fix to make it work better. 
-By using SonarQube, developers can improve the quality and reliability of their software.
-To scan the vulnerabilities.
-Scan Quality good(language rule), code smell(confusion), code coverage,
