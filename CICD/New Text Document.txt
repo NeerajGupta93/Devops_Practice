@@ -12,7 +12,8 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 systemctl status jenkins
-
+enable 8080
+systemctl jenkins enable
 //// Jenkind run on Port 8080 by Default ////
 /var/lib/jenkins/secrets/initialAdminPassword
 cd /var/lib/jenkins/workspace/django-notes-app
@@ -23,4 +24,12 @@ sudo systemctl enable jenkins
 sudo systemctl enable docker
 sudo systemctl restart jenkins
 sudo systemctl restart docker
-hello
+
+/// We use declerative instead of free style. Need to learn apache grrovy syntax. ///
+/// stages {Code------> Build--------> Test------> Deploy} ////
+
+
+
+/// SonarQuube /////
+docker run -itd --name sonarqube-server -p 9000:9000 sonarqube:lts-community
+bydefault pass: admin admin
