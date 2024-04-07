@@ -32,7 +32,6 @@ sudo systemctl enable jenkins
 sudo systemctl enable docker
 sudo systemctl restart jenkins
 sudo systemctl restart docker
-
 /// We use declerative instead of free style. Need to learn apache grrovy syntax. ///
 /// stages {Code------> Build--------> Test------> Deploy} ////
 
