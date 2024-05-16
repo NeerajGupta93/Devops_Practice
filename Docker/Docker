@@ -13,7 +13,7 @@ docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
 docker kill 6f3627bf041d (container id)
 docker exec -it 35864c3137b2 bash (container id)
 mysql -u root -p
-
+show databases;
 
 
 #### Working With Docker Hub #####
