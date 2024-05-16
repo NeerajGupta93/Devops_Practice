@@ -16,7 +16,7 @@ mysql -u root -p
 show databases;
 docker build -t java-app:latest .
 docker run java-app:latest
-
+docker system prune
 
 
 
