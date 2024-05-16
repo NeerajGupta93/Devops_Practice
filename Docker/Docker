@@ -35,6 +35,6 @@ cd vol
 mkdir mysqldata
 cd mysqldata
 pwd (get the path to store the fil from the swl app)
-docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
+docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7  (-v mount the volume)
 docker rm mysql-safe
 docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
