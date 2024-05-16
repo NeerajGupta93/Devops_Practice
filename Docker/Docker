@@ -15,6 +15,10 @@ docker exec -it 35864c3137b2 bash (container id)
 mysql -u root -p
 show databases;
 docker build -t java-app:latest .
+docker run java-app:latest
+
+
+
 
 #### Working With Docker Hub #####
 docker login
