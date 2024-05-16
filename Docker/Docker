@@ -14,7 +14,7 @@ docker kill 6f3627bf041d (container id)
 docker exec -it 35864c3137b2 bash (container id)
 mysql -u root -p
 show databases;
-
+docker build -t java-app:latest
 
 #### Working With Docker Hub #####
 docker login
