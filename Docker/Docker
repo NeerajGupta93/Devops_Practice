@@ -38,3 +38,7 @@ pwd (get the path to store the fil from the swl app)
 docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7  (-v mount the volume)
 docker rm mysql-safe
 docker run -d -v $(pwd):/var/lib/mysql --name mysql-safe -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
+
+
+##### script for mysql #####
+./message.sql:/docker-entrypoint-initdb.d/message.sql   # Mount sql script into container's /docker-entrypoint-initdb.d directory to get table automatically created
