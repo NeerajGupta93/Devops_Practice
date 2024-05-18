@@ -7,3 +7,8 @@ attach sonarqube server in jenkins
 install sonarqube scanner in tools(to enablle)
 In sonarqube, In config create webhook and provide jenkins URl with Port
 Install OWASP for dependencyCheck in plugind in jenkins
+
+
+docker build -t django-notes-app:latest .
+docker-compose up -d
+docker run -d -p 8000:8000 django-notes-app:latest
