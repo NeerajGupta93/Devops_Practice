@@ -1,1 +1,17 @@
-jenkinf
+pipeline {
+    
+    agent any
+    
+    stages {
+        
+        stage("Code"){.....}         
+        stage("Build"){....}    
+        stage("Test"){.....}
+        stage("Push to Private Docker Hub Repo"){.....}
+        stage("Sonar"){....}
+        stage("OWASP"){....}
+        stage("Trivy"){....}
+        stage("Deploy"){...}
+
+    }
+}
