@@ -4,8 +4,14 @@ pipeline {
     
     stages {
         
-        stage("Code"){.....}         
-        stage("Build"){....}    
+        stage("Code"){
+            step{
+            }
+        }
+        stage("Build"){
+            step{
+            }
+        }
         stage("Test"){.....}
         stage("Push to Private Docker Hub Repo"){.....}
         stage("Sonar"){....}
