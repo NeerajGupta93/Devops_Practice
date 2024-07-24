@@ -1,5 +1,5 @@
 docker exec -it cecc5bdc1b98 bash
-mysql -u root -p
+mysql -u root -p(mysql -u root -h remote_host -p)
 test@123
 show databases;
 create database KYC;
